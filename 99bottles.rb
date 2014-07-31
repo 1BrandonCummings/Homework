@@ -1,23 +1,24 @@
 
 
 puts "How many bottles of beer are on the wall??? \n (Type Number!)"
-y = gets.chomp
+user_input = gets.chomp
 
-x = Integer(y)
+counter = Integer(user_input)
 
 
-if x <=0
+if counter <=0
 	puts "We can't drink negative beers silly \n Put in a positive amount of beers!"
-	y = gets.chomp
-	x = Integer(y)
+	user_input = gets.chomp
+	counter = Integer(user_input)
 end
 
-while x >= 1
-	puts "#{x} bottle of beer on the wall, #{x} bottles of beer, take one down, pass it around, #{x -1} bottles of beer on the wall!" 
-	x = x - 1 
-	if x < 1
+while counter >= 1
+	puts "#{counter} bottle of beer on the wall,\n #{counter} bottles of beer, take one down, pass it around,\n #{counter -1} bottles of beer on the wall!" 
+	counter -= 1 
+	if counter < 1
 		puts "no more beer on the wall!"
 	end
+	sleep 2
 	
 end
 	
