@@ -41,22 +41,26 @@ score = 0
 	puts question 
 	answer_to_question = gets.chomp
 
-	if question == questions[counter]
-		if answer_to_question.downcase == answers[counter]
-			score += 1
-		elsif answer_to_question.downcase != answers[counter]
-			score -= 1
-		else puts "Please type Yes or No"
-		end
-		counter += 1
-	end
+	if answer_to_question.downcase != "yes" || "no"
+		puts "Please type Yes or No"
+		answer_to_question = gets.chomp
+
+			elsif question == questions[counter]
+				if answer_to_question.downcase == answers[counter]
+					score += 1
+				else answer_to_question.downcase != answers[counter]
+					score -= 1
+				end
+				counter += 1
+			end
+			if score > 0
+			puts "You won congratulations!"
+	else puts "You lost"
 end
 
-
-
-
-
 end
+puts score
 
-puts
+
+
 
