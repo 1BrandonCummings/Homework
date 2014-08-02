@@ -39,28 +39,37 @@ score = 0
 
  questions.each do |question|
 	puts question 
-	answer_to_question = gets.chomp
+	user_input = gets.chomp.to_s
+	answer_to_question = user_input
 
-	if answer_to_question.downcase != "yes" || "no"
-		puts "Please type Yes or No"
-		answer_to_question = gets.chomp
+	if answer_to_question ==  answers[0]
 
-			elsif question == questions[counter]
-				if answer_to_question.downcase == answers[counter]
-					score += 1
-				else answer_to_question.downcase != answers[counter]
-					score -= 1
-				end
-				counter += 1
-			end
-			if score > 0
-			puts "You won congratulations!"
-	else puts "You lost"
-end
+		
+    puts "Equals"
+		
+
+	elsif answer_to_question != answers[counter]
+	 puts "Please type Yes or No"
+
+	end
 
 end
+
+
 puts score
 
 
 
+#if question == questions[counter]
 
+#				puts question
+#if answer_to_question.downcase == answers[counter]
+#					score += 1
+#
+#				elsif answer_to_question.downcase != answers[counter]
+#					score -= 1
+#
+#				end
+#				counter += 1
+
+#end
