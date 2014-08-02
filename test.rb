@@ -1,21 +1,3 @@
-#Actually 5 questions
-
-#ASK 5 questions that add up the Yes or Nos and 
-
-#Use arrays
-
-#USe .each
-
-#What happens when you type not no or yes
-
-
-#This should be a game that asks the player
-# 5 questions that are true or false,
-# tallies up the results,
-# and says whether or not they answered a majority of the questions correct.
-
-
-
 question_1 = "Do we ever see the darkside of the moon? (Yes or No)"					
 answer_1 = "no"
 
@@ -41,25 +23,26 @@ final_tally = 0
 pairs = [[question_1, answer_1], [question_2, answer_2],[question_3,answer_3],[question_4,answer_4],[question_5,answer_5]]
 
 
-while counter <= pairs.count
+while counter <= pairs.count 
+	puts pairs[0][0]
+	user_input = gets.chomp
 
-		puts pairs[counter][0]
-		user_input = gets.chomp
-		
+		case asking_questions
 
-			
-				if user_input.downcase == pairs[0][1]
-					score += 1
-					final_tally += 1
-					counter += 1
-				elsif user_input.downcase != pairs[0][1]
-					score -= 1
-					counter += 1
-				else "Please Type Yes or No"
+		when user_input.downcase == pair[1]
+			score += 1
+			final_tally += 1
 
-				end	
-	
+		when user_input.downcase != pair[1]
+			score -= 1
+
+		when user_input.empty? == true
+			puts pair[0]
+			puts "Make sure to type Yes or No"
+		else puts "derp"	
 end
+end
+
 
 if score > 0
 	puts "You win!"
