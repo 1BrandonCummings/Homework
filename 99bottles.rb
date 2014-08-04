@@ -18,7 +18,7 @@ while counter >= 1
 	if counter < 1
 		puts "no more beer on the wall!"
 	end
-	sleep 2
+	sleep 1
 	
 end
 	

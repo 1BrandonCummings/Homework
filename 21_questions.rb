@@ -42,7 +42,8 @@ counter = 0
 
 #an array of acceptable answers to help with conditionals
 
-accepted = ["yes","no"]
+accepted = ["yes","no"] 
+
 
 #now onto the loop through questions, we start by comparing
 #our counter to make sure that we loop through the correct
@@ -54,17 +55,17 @@ while counter < pairs.count
 		user_input = gets.chomp				#the user the inputs their answer
 		
 
-					if user_input.downcase != accepted[1] && user_input.downcase != accepted[0]  #we make sure the input is an acceptable answer
+					if user_input.downcase != accepted[0] && user_input.downcase != accepted[1]  #we make sure the input is an acceptable answer
 						puts "Please type Yes or No"											 #if not, we ask them to type yes or no, and the question
 																								 #is asked again
 
 						elsif 											#if it is an acceptable answer we compare the
 							user_input.downcase == pairs[counter][1]    #lowercase version to the answer of the certain question we are asking
 							final_tally += 1 							#if it is correct, we add 1 to the final tally
-							counter += 1 								#and we add one to the counter to iterate to the next question
+							counter += 1								#and we add one to the counter to iterate to the next question
 						elsif 											
 						 	user_input.downcase != pairs[counter][1]	#this is if it is the wrong answer, we just change the 
-							counter += 1 								# the counter to go onto the next question without giving them
+							counter += 1								# the counter to go onto the next question without giving them
 																		#credit for a correct answer
 					end	
 	
