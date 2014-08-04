@@ -36,40 +36,24 @@ pairs = [[question_1, answer_1], [question_2, answer_2],[question_3,answer_3],[q
 
 final_tally = 0
 
-#a counter to help run through questions
-
-counter = 0
-
-#an array of acceptable answers to help with conditionals
-
-accepted = ["yes","no"] 
-
 
 #now onto the loop through questions, we start by comparing
 #our counter to make sure that we loop through the correct
 #number of times
 
-while counter < pairs.count 
+pairs.each do |question, answer|
 
-		puts pairs[counter][0] 				#we print the question to the console
-		user_input = gets.chomp				#the user the inputs their answer
-		
+	puts question
+	user_input = gets.chomp.downcase
 
-					if user_input.downcase != accepted[0] && user_input.downcase != accepted[1]  #we make sure the input is an acceptable answer
-						puts "Please type Yes or No"											 #if not, we ask them to type yes or no, and the question
-																								 #is asked again
-
-						elsif 											#if it is an acceptable answer we compare the
-							user_input.downcase == pairs[counter][1]    #lowercase version to the answer of the certain question we are asking
-							final_tally += 1 							#if it is correct, we add 1 to the final tally
-							counter += 1								#and we add one to the counter to iterate to the next question
-						elsif 											
-						 	user_input.downcase != pairs[counter][1]	#this is if it is the wrong answer, we just change the 
-							counter += 1								# the counter to go onto the next question without giving them
-																		#credit for a correct answer
-					end	
-	
-			end
+		if user_input != "yes" && user_input != "no"
+			puts "Please type Yes or No"
+			redo
+		elsif user_input == answer
+			final_tally +=1
+		end
+	end
+				
 
 
 if final_tally > 2 										#we check to see if they got a majority of the 
