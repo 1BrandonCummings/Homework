@@ -30,7 +30,15 @@ answer_5 = "yes"
 
 #after assigning the questions variables, I then add them to an array so I can easily run through the question/answer combo
 
-pairs = [[question_1, answer_1], [question_2, answer_2],[question_3,answer_3],[question_4,answer_4],[question_5,answer_5]]
+pairs = {
+	
+	question_1 => answer_1,
+	question_2 => answer_2, 
+	question_3 => answer_3, 
+	question_4 => answer_4, 
+	question_5 => answer_5
+
+	 }
 
 #next is to assign variable so I can keep score
 
@@ -43,7 +51,7 @@ final_tally = 0
 
 pairs.each do |question, answer|
 
-	puts question
+	puts question 
 	user_input = gets.chomp.downcase
 
 		if user_input != "yes" && user_input != "no"
