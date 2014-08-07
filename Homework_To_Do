@@ -1,9 +1,17 @@
-Update:
+August 6th Homework:
 
-21_questions to use hashes
+Helper method
 
--On Paper, start thinking about what pages you would like for your blog
+<% link_to( "Google", "http://google.com") %>
 
--Clean up all the anchor links
+-Update sitemap to use link_to
 
+-update pics page with photos of you instead of randoms:
 
+-Do descriptions for each photo, do a .each loop that does a link, a picture, and description. Try using Hashes!
+
+-Map out blog/portfolio, include them in your site map
+
+-Poke at the applications.html.erb
+
+-Flush out our inventory  products system, make it pretty.
