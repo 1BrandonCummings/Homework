@@ -1,17 +1,30 @@
+August 11th:
+
+-Put time session in the footer so it shows every page (revolves around application controller)
+
+-SHow each pages timestamp
+
+
+
+
+
+
+
+
 August 6th Homework:
 
-Helper method
+CHECK: Helper method
 
-<% link_to( "Google", "http://google.com") %>
+CHECK: <% link_to( "Google", "http://google.com") %>
 
--Update sitemap to use link_to
+CHECK: Update sitemap to use link_to
 
--update pics page with photos of you instead of randoms:
+CHECK: Update pics page with photos of you instead of randoms:
 
--Do descriptions for each photo, do a .each loop that does a link, a picture, and description. Try using Hashes!
+CHECK: Do descriptions for each photo, do a .each loop that does a link, a picture, and description. Try using Hashes!
 
--Map out blog/portfolio, include them in your site map
+CHECK: Map out blog/portfolio, include them in your site map
 
--Poke at the applications.html.erb
+CHECK: Poke at the applications.html.erb
 
--Flush out our inventory  products system, make it pretty.
+Flush out our inventory  products system, make it pretty.
