@@ -1,4 +1,15 @@
 
+
+August 25th
+
+- Get the selecting category type from db on page, use the params to capture user input.
+
+- If new category is added to db, make it show as a button for user to choose the category they just created.
+
+
+
+
+
 August 21st Homework
 
 -create picture model, update your pictures tab for actions, display from database
